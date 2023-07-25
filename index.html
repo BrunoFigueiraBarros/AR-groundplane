@@ -30,6 +30,11 @@
           clampWhenFinished: true,
           timeScale: 0.5,
         });
+
+        modeloEntity.addEventListener('animation-finished', function () {
+          modeloEntity.removeAttribute('animation-mixer');
+          console.log('Animação concluída e removida!');
+        });
         
         console.log('Animação iniciada!');
       }
